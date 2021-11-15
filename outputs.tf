@@ -224,3 +224,16 @@ output "kube_proxy_arn" {
   description = "The arn of the kube-proxy addon"
   value       = module.addons.kube_proxy_arn
 }
+
+#output required for self aws_auth management. Right now only configmap_roles is used.
+output "auth_launch_template_worker_roles" {
+  value = local.auth_launch_template_worker_roles
+}
+
+output "auth_worker_roles" {
+  value = local.auth_worker_roles
+}
+
+ output "configmp_roles" {
+   value = local.configmap_roles
+}
